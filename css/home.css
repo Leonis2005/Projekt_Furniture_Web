@@ -1,0 +1,1101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+/* Fillimi i Home Page */
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  
+  body{
+      background-color: #ffffff;
+      width: 100%;
+  }
+  
+  html{
+      font-size: 62.5%;
+      overflow-x: hidden ;
+  }
+  
+  section{
+      padding: 3rem 9%;
+      overflow-x: hidden;
+  }
+  
+  
+  .btn{
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 1rem 3rem;
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      color: #3b5d50;
+      cursor: pointer;
+      border-radius: 1rem;
+      background-color: #ffffff;
+  
+  }
+  
+  /* Fillimi i seksionit Header */
+  
+  .header{
+      padding: 2rem 9%;
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #3b5d50 ;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  .header .logo{
+      font-size: 2.5rem;
+      color: #ffffff;
+      font-weight: 500;
+  }
+  
+  .header .logo i{
+      padding-right: 0.3rem;
+  }
+  
+  .header .search-form{
+      height: 5rem;
+      width: 50rem;
+      border-radius: 0.75rem;
+      background-color: transparent;
+      overflow: hidden;
+      display: flex;
+      background-color: #ffffff;
+      align-items: center;
+      border: 0.1rem solid #3b5d50;
+  
+  }
+  
+  .header .search-form input{
+      height: 100%;
+      width: 100%;
+      padding: 0 1.2rem;
+      font-size: 1.6rem;
+      color: #3b5d50;
+      text-transform: none;
+      background: transparent;
+  }
+  
+  header .search-form input::placeholder{
+      color: #3b5d50;
+  }
+  
+  .header .search-form label{
+      font-size: 2.2rem;
+      padding-right: 1.7rem;
+      cursor: pointer;
+      color: #3b5d50;
+  }
+  .header .icons{
+      display: flex;
+      align-items: center;
+  
+  }
+  
+  .header .icons div{
+      margin-left: 2rem;
+      font-size: 2.5rem;
+      cursor: pointer;
+      color: #ffffff;
+  }
+  
+  .header .icons div:hover{
+      color: #c0f0cd;
+  }
+  
+  #search-btn{
+      display: none;
+      
+  }
+  
+  #closer{
+      position: fixed;
+      top: 5rem;
+      right: 4rem;
+      font-size: 5rem;
+      cursor: pointer;
+      z-index: 10000;
+      color: #ffffff;
+      display: none; 
+      
+  }
+  
+  #closer:hover{
+      color: #c0f0cd;
+  }
+  /* Mbarimi i seksionit Header */
+  
+  
+  /* Fillimi i navbar */
+  
+  .navbar{
+      position: fixed;
+      top: 1.5%;
+      bottom: 1.5%;
+      right: -101%;
+      z-index: 1000;
+      width: 35rem;
+      background: #3b5d50;
+      display: flex;
+      margin: 2%;
+      border-radius: 3rem;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+  
+  }
+  
+  .navbar.active {
+  
+      right: 0;
+      box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+      transition: .4s linear;
+  
+  }
+  
+  .navbar a{
+      margin: 1rem;
+      font-size: 2.5rem;
+      color: #ffffff;
+  }
+  
+  .navbar a:hover{
+      color: #c0f0cd;
+  }
+  
+  /* Mbarimi i Navbar */
+  
+  /* Fillimi i Shopping Cart */
+  
+  .shopping-cart{
+      align-items: center;
+      position: fixed;
+      top: 1.5%;
+      bottom: 1.5%;
+      right: -101%;
+      z-index: 1000;
+      width: 35rem;
+      background: #3b5d50;
+      padding: 2rem;
+      padding-top: 8rem;
+      margin: 2%;
+      border-radius: 3rem;
+  
+  }
+  .shopping-cart.active{
+      right: 0;
+      box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+      transition: .4s linear;
+  }
+  
+.shopping-cart .box{
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.75rem;
+      background-color: #ffffff;
+      border-radius: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+.shopping-cart .box:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+  
+  
+.shopping-cart .box .close-icon{
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #3b5d50;
+      cursor: pointer;
+  }
+  
+  .shopping-cart .box img{
+      border-radius: 0.65rem;
+      height: 8.5rem;
+  }
+  
+  
+  .shopping-cart .box .content h3{
+      color: #3b5d50;
+      font-size: 1.8rem;
+      padding-bottom: 0.5rem;
+  
+  }
+  
+  .shopping-cart .box .content span{
+      font-size: 1.5rem;
+      color: #3b5d50;
+  }
+  
+  .shopping-cart .box .content span.multiply{
+      margin: 0 1rem;
+  }
+  
+  .shopping-cart .total{
+      text-align: center;
+      font-size: 2rem;
+      padding: 1rem 0;
+      color: #ffffff;
+  
+  }
+  
+  .shopping-cart .total span{
+      color: #ffffff;
+  }
+  
+  .shopping-cart .btn{
+      width: 100%;
+      text-align: center;
+  
+  }
+  
+  .shopping-cart .btn:hover{
+      font-weight: bold;
+  }
+
+  /* Mbarimi i i Shopping Cart */
+
+
+  
+  /* Fillimi i seksionit Hero */
+  
+  .hero{
+      background-color: #3b5d50;
+      padding: 80px 5%;
+      padding-bottom: 0;
+      
+  }
+  
+  .hero-main{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+  }
+  
+  .hero-info{
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  
+  .hero-info h1{
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+  }
+  
+  .hero-info p{
+      color: #ffffff;
+      font-size: 1rem;
+      margin: 20px 0px;
+      line-height: 1.6;
+  }
+  
+  .btns{ 
+      display: flex;
+      gap: 15px;
+  }
+  
+  .btns button{
+      height: 50px;
+      padding: 0px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+  
+  }
+  
+  .btns .sn{
+      background-color: #f9bf29;
+      color: #ffffff;
+      border: 2px solid #f9bf29;
+      cursor: pointer;
+  }
+  
+  .btns .e{
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      cursor: pointer;
+  
+  }
+  
+  .btns .e:hover{
+      background: #ffffff;
+       color: #3b5d50;
+      transform: scale(1.1);
+  }
+  
+  .btns .sn:hover{
+      background-color: #e0a91d;
+      transform: scale(1.1);
+  }
+  
+  .hero-img{
+      width: 55%;
+      position: relative;
+  }
+  
+  .hero-img img{
+      position: relative;
+      width: 100%;
+      z-index: 1;
+  }
+  
+  .dots{
+      position: absolute;
+      top: 30px;
+      right: 0;
+      z-index: 0;
+  }
+  
+  /* Mbarimi i seksionit Hero */
+  
+  /* Fillimi i seksionit te Produkteve */
+  
+  .product-section{
+      width: 100%;
+      background-color: #eff2f1;
+  }
+  
+  .product-main{
+      padding: 150px 2%;
+      display: flex;
+  }
+  
+  .product-info{
+      width: 24%;
+      margin-right: 1%;
+  }
+  
+  .product-info h3{
+      font-size: 36px;
+      line-height: 1.2;
+      color: #000000;
+      margin-bottom: 20px;
+      font-weight: 600;
+  }
+  
+  .product-info p{
+      font-size: 16px;
+      line-height: 1,6;
+      color: #000000;
+      margin-bottom: 30px;
+  
+  }
+  
+  .product-info button{
+      height: 50px;
+      padding: 0px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      color: #ffffff;
+      background-color: #3b5d50;
+      border: none;
+      transition: transform 0.3s ease;
+  
+  }
+  
+  .product-info button:hover {
+      transform: translateY(-3px);
+      font-weight: bold;
+      cursor: pointer;
+      transform: translateY(-3px);
+  }
+  
+  .product-card{
+      width: 65%;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  .product-item{
+      width: 32%;
+      text-align: center;
+   
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 50px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+  
+   .product-item:hover { 
+      transform: translateY(-10px);
+  }
+  
+  
+  .product-item:hover img{
+      transform: translateY(-10px);
+      
+  }
+  
+  .shopoverlay{
+      position: absolute;
+      height: 70%;
+      width: 100%;
+      background-color: #dce5e4;
+      border-radius: 5%;
+      bottom: -100%;
+      display: flex;
+      z-index: 0;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease-in-out;
+  }
+  
+  .shopoverlay i{
+      position: absolute;
+      bottom: 0px;
+      font-size: 40px;
+      color: #3b5d50;
+      cursor: pointer;
+      z-index: 2;
+  }
+  
+  .product-item img{
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+     
+  }
+  
+  .product-item h4{
+      margin-top: 20px;
+      font-size: 18px;
+      position: relative;
+      z-index: 1;
+  }
+  
+  
+  .product-item h3{
+      margin-top: 10px;
+      font-size: 22px;
+      position: relative;
+      z-index: 1;
+  }
+  
+  
+  .product-item:hover .shopoverlay{ 
+      bottom: 0;
+  }
+  
+  /* Mbarimi i seksionit te Produkteve */
+  
+  
+  /* Fillimi i seksionit Why Choose Us */
+  
+  .wcy {
+      width: 100%;
+      background-color: #f4f7f6;
+      padding: 100px 5%;
+  }
+  
+  .wcy-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+  }
+  
+  .wcy-info {
+      width: 48%;
+      padding-right: 2%;
+      animation: fadeInLeft 1s ease-in-out;
+  }
+  
+  .wcy-info h2 {
+      font-size: 36px;
+      color: #003300;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+  
+  .wcy-info p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 30px;
+  }
+  
+  .wcy-card {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+  
+  .feature {
+      width: 48%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-icon {
+      filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.2));
+      margin-bottom: 15px;
+  }
+  
+  .feature h3 {
+      font-size: 18px;
+      color: #003300;
+      font-weight: 600;
+      margin-bottom: 10px;
+  }
+  
+  .feature p {
+      font-size: 14px;
+      color: #666;
+  }
+  
+  .wcy-img {
+      width: 48%;
+      position: relative;
+      text-align: right;
+      animation: fadeInRight 1s ease-in-out;
+  }
+  
+  .wcy-img img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  }
+  
+  .wcy-img img:hover {
+      transform: scale(1.05);
+  }
+  
+  .dots2 {
+      position: absolute;
+      left: 0;
+      top: -60px;
+      z-index: -1;
+  }
+  
+  /* Mbarimi i seksionit Why Choose Us */
+  
+  
+  /* Fillimi i seksionit We Help */
+  
+  .wh{
+      width: 100%;
+      background-color: #eff2f1;
+  }
+  
+  .wh-main{
+      padding: 150px 5%;
+      display: flex;
+  
+  }
+  
+  .wh-img{
+      width: 60%;
+      height: 100vh;
+  }
+  
+  .wh-main{
+      padding: 100px 2%;
+      display: flex;
+  }
+  
+  .wh-img{
+      width: 60%;
+      height: 100vh;
+      display: flex;
+      position: relative;
+  }
+  
+  .wh-img .g1{
+      width: 65%;
+      height: 80%;
+      border-radius: 30px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+  }
+  
+  .wh-img .g2{
+      width: 32%;
+      height: 38%;
+      border-radius: 30px;
+      margin-left: 3%;
+      transition: transform 0.3s ease;
+  }
+  
+  .wh-img .g3{
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      top: 40%;
+      left: 40%;
+      border-radius: 30px;
+      z-index: 2;
+      transition: transform 0.3s ease;
+  }
+  
+  .wh-img .g1:hover, 
+  .wh-img .g2:hover, 
+  .wh-img .g3:hover { 
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); }
+  
+  
+  .wh-img .gd{
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 200px;
+      z-index: 0;
+      opacity: 0.8;
+  }
+  
+  .wh-info{
+      width: 35%;
+      margin-left: 2%;
+  }
+  
+  .wh-info h2{
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      margin-left: 15%;
+  }
+  
+  .wh-info p{
+      font-size: 14px;
+      line-height: 30px;
+      color: #000000;
+      margin-left: 15%;
+      margin-bottom: 15px;
+  }
+  
+  .wh-info ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: circle;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-left: 15%;
+  }
+  
+  .wh-info ul li{
+      width: 40%;
+      margin-bottom: 20px;
+  }
+  
+  .wh-info button{
+      height: 50px;
+      padding: 0px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      color: #ffffff;
+      background-color: #3b5d50;
+      border: none;
+      transition: transform 0.3s ease;
+      margin-left: 15%;
+      cursor: pointer;
+  }
+  
+  .wh-info button:hover{
+      font-weight: bold;
+      transform: translateY(-3px);
+  }
+  
+  /* Mbarimi i seksionit We Help */
+  
+  
+  /* Fillimi i seksionit Testimonials */
+  
+  .testimonials {
+      padding: 150px 2%;
+      background-color: #dce5e4;
+  }
+  
+  .testimonials h2 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 600;
+      color: #003300;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+  }
+  
+  .mySlider {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 10px;
+  }
+  
+  .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+  }
+  
+  .testimonials-slide {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonials-slide p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 20px;
+  }
+  
+  .testimonials-profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+  }
+  
+  .testimonials-profile img {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+  }
+  
+  .testimonials-profile h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #3b5d50;
+      margin-bottom: 5px;
+  }
+  
+  .testimonials-profile p {
+      font-size: 14px;
+      color: #666;
+  }
+  
+  .next, .prev {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      border-radius: 50%;
+      background-color: #3b5d50;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      transition: background-color 0.3s;
+  }
+  
+  .prev {
+      left: 10px;
+  }
+  
+  .next {
+      right: 10px;
+  }
+  
+  .next:hover, .prev:hover {
+      background-color: #004400;
+  }
+  
+  /* Mbarimi i seksionit Testimonials */
+  
+  
+  /* Fillimi i seksionit Blog */
+  
+  .blog{
+      background-color: #eff2f1;
+  }
+  
+  .blog-main{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 150px 2%;
+      margin-bottom: 50px;
+      width: 100%;
+  }
+  
+  .blog-head{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+  }
+  
+  .blog-head h2{
+      font-size: 32px;
+      font-weight: 700;
+  }
+  
+  .blog-head a{
+      text-align: end;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+  }
+  
+  
+  .blog-cards{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  
+  .blog-card{
+      width: 32%;
+      margin-bottom: 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-card:hover{
+       transform: translateY(-10px); 
+       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .blog-card img{
+      width: 100%;
+      height: auto;
+      border-bottom: 3px solid #3b5d50;
+      border-radius: 5%;
+  }
+  
+  .blog-card h4{
+      font-size: 18px;
+      font-weight: 600;
+      color: #3b5d50;
+      margin: 20px;
+  }
+  
+  .blog-card p{
+      font-size: 14px;
+      color: #000000;
+      margin: 0 20px 20px;  
+  }
+  
+  .blog-head a { 
+      color: #000000; 
+      text-decoration: none; 
+   }
+  
+   /* Mbarimi i seksionit Blog */
+  
+  
+   /* Fillimi i seksionit Footer */
+  
+   footer {
+      background-color: #f7f9f8; 
+      padding: 50px 0;
+      color: #333;
+  }
+  
+  .newsletter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background-color: #e0e7e9;
+      border-bottom: 2px solid #d1d9da;
+  }
+  
+  .newsletter-form h3 {
+      font-size: 24px;
+      color: #3b5d50;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  
+  .newsletter-form form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  
+  .newsletter-form input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+  }
+  
+  .newsletter-form button {
+      padding: 10px 20px;
+      background-color: #3b5d50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-img img {
+      width: 150px;
+  }
+  
+  .footer-main {
+      padding: 50px 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid #d1d9da;
+  }
+  
+  .footer-main h3 {
+      font-size: 32px;
+      color: #3b5d50;
+      margin-bottom: 20px;
+  }
+  
+  .footer-lists {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+  
+  .footer-main-info {
+      flex: 1 1 30%;
+  }
+  
+  .footer-main-info p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #000000;
+      margin-bottom: 20px;
+  }
+  
+  .footer-icons {
+      display: flex;
+      gap: 15px;
+  }
+  
+  .footer-icons i{
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: #dce5e4;
+      color: #3b5d50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      transition: all 0.5s ease-in-out;
+   }
+  
+   .footer-icons i:hover{
+      background-color: #3b5d50;
+      color: #ffffff;
+      cursor: pointer;
+   }
+  
+  .links {
+      display: flex;
+      justify-content: space-between;
+      flex: 1 1 70%;
+      gap: 20px;
+  }
+  
+  .links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .links ul li {
+      margin-bottom: 10px;
+  }
+  
+  .links ul li a {
+      color: #3b5d50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+  
+  .links ul li a:hover {
+      color: #004400;
+  }
+  
+  .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 5%;
+      font-size: 14px;
+      color: #000000;
+  }
+  
+  .footer-bottom p {
+      margin: 0;
+  }
+  
+  .footer-bottom a {
+      color: #3b5d50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+  
+  .footer-bottom a:hover {
+      color: #004400;
+  }
+  
+  /* Mbarimi i seksionit Footer */
+  
+  
+  /* Mbarimi i Home Page */
+  
