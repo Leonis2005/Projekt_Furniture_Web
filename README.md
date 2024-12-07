@@ -1,1 +1,1 @@
-# Projekt_Furniture_Web
+# Projekt - Furniture Website (Meris Gashi,Leonis Vorfaj).
