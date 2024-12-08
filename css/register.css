@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body {
+    background: linear-gradient(135deg, #3b5d50, #67957f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.form-container {
+    width: 40rem; /* Reduced width */
+    padding: 2rem; /* Reduced padding */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 2rem; /* Reduced border-radius */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.form-container form {
+    width: 100%;
+    padding: 3rem; /* Reduced padding */
+    background: #ffffff;
+    border-radius: 1.5rem; /* Reduced border-radius */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-container form h3 {
+    font-size: 2.8rem; /* Reduced font-size */
+    padding-bottom: 2rem; /* Reduced padding */
+    color: #3b5d50;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-container form .box {
+    width: 100%;
+    text-transform: none;
+    font-size: 1.6rem; /* Reduced font-size */
+    color: #3b5d50;
+    padding: 1rem 1.5rem; /* Reduced padding */
+    border: 0.1rem solid #3b5d50;
+    margin: 1rem 0; /* Reduced margin */
+    border-radius: 0.8rem; /* Reduced border-radius */
+    background: #ffffff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form .box::placeholder {
+    color: #a0a0a0;
+}
+
+.form-container form .btn {
+    width: 100%;
+    padding: 1rem; /* Reduced padding */
+    font-size: 1.8rem; /* Reduced font-size */
+    color: #ffffff;
+    background: #3b5d50;
+    border: none;
+    border-radius: 0.8rem; /* Reduced border-radius */
+    transition: background 0.3s ease;
+    margin-top: 2rem;
+}
+
+.form-container form .btn:hover {
+    background: #2a4237;
+    font-weight: bold;
+}
+
+.form-container form p {
+    padding-top: 2rem; /* Reduced padding */
+    font-size: 1.4rem; /* Reduced font-size */
+    color: #3b5d50;
+    text-align: center;
+}
+
+.form-container form p a {
+    color: #3b5d50;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.form-container form p a:hover {
+    color: #2a4237;
+}
+
+.error {
+    color: red;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+}
