@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+/* Fillimi i About Us Page */
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  
+  body{
+      background-color: #ffffff;
+      width: 100%;
+  }
+  
+  html{
+      font-size: 62.5%;
+      overflow-x: hidden ;
+  }
+  
+  section{
+      padding: 3rem 9%;
+      overflow-x: hidden;
+  }
+  
+  
+  .btn{
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 1rem 3rem;
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      color: #3b5d50;
+      cursor: pointer;
+      border-radius: 1rem;
+      background-color: #ffffff;
+  
+  }
+  
+.heading{
+    background-color: #3b5d50;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-radius: 3rem;
+}
+
+.heading h3{
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.heading p{
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.heading p a{
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    border-bottom: 0.1rem solid #3b5d50;
+    padding-bottom: 1.5rem;
+}
+
+.title span {
+    font-size: 2.5rem;
+    color: #3b5d50;
+}
+
+.title a {
+    font-size: 1.5rem;
+    color: #3b5d50;
+}
+
+.title a:hover {
+    transform: translateX(-3px);
+    color: #004400;
+}
+  /* Fillimi i seksionit Header */
+  
+  .header{
+      padding: 2rem 9%;
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #3b5d50 ;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  .header .logo{
+      font-size: 2.5rem;
+      color: #ffffff;
+      font-weight: 500;
+  }
+  
+  .header .logo i{
+      padding-right: 0.3rem;
+  }
+  
+  .header .search-form{
+      height: 5rem;
+      width: 50rem;
+      border-radius: 0.75rem;
+      background-color: transparent;
+      overflow: hidden;
+      display: flex;
+      background-color: #ffffff;
+      align-items: center;
+      border: 0.1rem solid #3b5d50;
+  
+  }
+  
+  .header .search-form input{
+      height: 100%;
+      width: 100%;
+      padding: 0 1.2rem;
+      font-size: 1.6rem;
+      color: #3b5d50;
+      text-transform: none;
+      background: transparent;
+  }
+  
+  header .search-form input::placeholder{
+      color: #3b5d50;
+  }
+  
+  .header .search-form label{
+      font-size: 2.2rem;
+      padding-right: 1.7rem;
+      cursor: pointer;
+      color: #3b5d50;
+  }
+  .header .icons{
+      display: flex;
+      align-items: center;
+  
+  }
+  
+  .header .icons div{
+      margin-left: 2rem;
+      font-size: 2.5rem;
+      cursor: pointer;
+      color: #ffffff;
+  }
+  
+  .header .icons div:hover{
+      color: #c0f0cd;
+  }
+  
+  #search-btn{
+      display: none;
+      
+  }
+  
+  #closer{
+      position: fixed;
+      top: 5rem;
+      right: 4rem;
+      font-size: 5rem;
+      cursor: pointer;
+      z-index: 10000;
+      color: #ffffff;
+      display: none; 
+      
+  }
+  
+  #closer:hover{
+      color: #c0f0cd;
+  }
+  /* Mbarimi i seksionit Header */
+  
+  
+  /* Fillimi i navbar */
+  
+  .navbar{
+      position: fixed;
+      top: 1.5%;
+      bottom: 1.5%;
+      right: -101%;
+      z-index: 1000;
+      width: 35rem;
+      background: #3b5d50;
+      display: flex;
+      margin: 2%;
+      border-radius: 3rem;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+  
+  }
+  
+  .navbar.active {
+  
+      right: 0;
+      box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+      transition: .4s linear;
+  
+  }
+  
+  .navbar a{
+      margin: 1rem;
+      font-size: 2.5rem;
+      color: #ffffff;
+  }
+  
+  .navbar a:hover{
+      color: #c0f0cd;
+  }
+  
+  /* Mbarimi i Navbar */
+  
+  /* Fillimi i Shopping Cart */
+  
+  .shopping-cart{
+    align-items: center;
+    position: fixed;
+    top: 1.5%;
+    bottom: 1.5%;
+    right: -101%;
+    z-index: 1000;
+    width: 35rem;
+    background: #3b5d50;
+    padding: 2rem;
+    padding-top: 8rem;
+    margin: 2%;
+    border-radius: 3rem;
+
+}
+.shopping-cart.active{
+    right: 0;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+    transition: .4s linear;
+}
+
+.shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+}
+
+
+.shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.shopping-cart .box:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.shopping-cart .box .close-icon{
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #3b5d50;
+    cursor: pointer;
+}
+
+.shopping-cart .box img{
+    border-radius: 0.65rem;
+    height: 8.5rem;
+}
+
+
+.shopping-cart .box .content h3{
+    color: #3b5d50;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+
+}
+
+.shopping-cart .box .content span{
+    font-size: 1.5rem;
+    color: #3b5d50;
+}
+
+.shopping-cart .box .content span.multiply{
+    margin: 0 1rem;
+}
+
+.shopping-cart .total{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #ffffff;
+
+}
+
+.shopping-cart .total span{
+    color: #ffffff;
+}
+
+.shopping-cart .btn{
+    width: 100%;
+    text-align: center;
+
+}
+
+.shopping-cart .btn:hover{
+    font-weight: bold;
+}
+  
+/* Mbarimi i Shopping Cart */
+
+
+/* Fillimi i seksionit About */
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2%;
+    border-radius: 3rem;
+    background-color: #f5f5f5;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about .image {
+    flex: 1 1 40rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.about .image img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.about .image:hover {
+    transform: scale(1.05);
+}
+
+.about .content {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about .content:hover {
+    transform: translateY(-10px);
+}
+
+.about .content span {
+    font-size: 2rem;
+    color: #3b5d50;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.about .content h3 {
+    font-size: 2.5rem;
+    color: #003300;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.about .content p {
+    font-size: 1.4rem;
+    color: #666;
+    padding: 1rem 0;
+    line-height: 1.6;
+}
+
+.btn1 {
+    display: inline-block;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #3b5d50;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn1:hover {
+    transform: translateY(-3px);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Mbarimi i seksionit About */
+
+
+
+/* Fillimi i seksionit Services */
+
+.services {
+    padding: 50px 5%;
+    background-color: #f9f9f9;
+}
+
+.services .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 36px;
+    color: #3b5d50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.services .title a {
+    font-size: 18px;
+    color: #006600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.services .title a:hover {
+    color: #004400;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 2rem;
+}
+
+.box1 {
+    background-color: #ffffff;
+    border: 2px solid #3b5d50;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box1:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.box1 img {
+    height: 8rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.box1:hover img {
+    transform: scale(1.1);
+}
+
+.box1 h3 {
+    font-size: 2.2rem;
+    color: #3b5d50;
+    margin-bottom: 1rem;
+}
+
+.box1 p {
+    font-size: 1.4rem;
+    color: #3b5d50;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn1 {
+    display: inline-block;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #3b5d50;
+    border: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn1:hover {
+    transform: translateY(-3px);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Mbarimi i seksionit Services */
+
+/* Fillimi i seksionit Footer */
+
+footer {
+    background-color: #f7f9f8; 
+    padding: 50px 0;
+    color: #333;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #e0e7e9;
+    border-bottom: 2px solid #d1d9da;
+}
+
+.newsletter-form h3 {
+    font-size: 24px;
+    color: #3b5d50;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.newsletter-form form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #3b5d50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-img img {
+    width: 150px;
+}
+
+.footer-main {
+    padding: 50px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #d1d9da;
+}
+
+.footer-main h3 {
+    font-size: 32px;
+    color: #3b5d50;
+    margin-bottom: 20px;
+}
+
+.footer-lists {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-main-info {
+    flex: 1 1 30%;
+}
+
+.footer-main-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-icons i{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #dce5e4;
+    color: #3b5d50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: all 0.5s ease-in-out;
+ }
+
+ .footer-icons i:hover{
+    background-color: #3b5d50;
+    color: #ffffff;
+    cursor: pointer;
+ }
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 70%;
+    gap: 20px;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links ul li {
+    margin-bottom: 10px;
+}
+
+.links ul li a {
+    color: #3b5d50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+    color: #004400;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    font-size: 14px;
+    color: #000000;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #3b5d50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #004400;
+}
+
+/* Mbarimi i seksionit Footer */
+
+
+
+
+/* Mbarimi i About Us Page */
