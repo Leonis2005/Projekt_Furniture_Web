@@ -121,8 +121,7 @@ html {
     font-size: 1.4rem;
 }
 
-/* Responsive Part */
-
+/* Media Queries for responsiveness */
 @media (max-width: 1024px) {
     .login-page {
         width: 70%;
