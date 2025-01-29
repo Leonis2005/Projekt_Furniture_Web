@@ -656,3 +656,176 @@
 
 
 /* Mbarimi i Shop Page */
+
+
+/* Responsiviteti për Footer */
+
+/* Për pajisje më të vogla (tabletë dhe telefona) */
+@media (max-width: 768px) {
+    .newsletter {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+    }
+
+    .newsletter-form h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .newsletter-form form {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .footer-main {
+        padding: 30px 5%;
+    }
+
+    .footer-lists {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-main-info {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-icons {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-icons i {
+        height: 40px;
+        width: 40px;
+        font-size: 1.8rem;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .links ul {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+    .footer-bottom a {
+        font-size: 14px;
+    }
+}
+
+/* Për pajisje më të vogla (telefonat mobilë) */
+@media (max-width: 480px) {
+    footer {
+        padding: 20px 5%;
+    }
+
+    .newsletter-form h3 {
+        font-size: 20px;
+    }
+
+    .newsletter-form form {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .newsletter-form input {
+        font-size: 12px;
+    }
+
+    .newsletter-form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .footer-main h3 {
+        font-size: 24px;
+    }
+
+    .footer-icons i {
+        height: 35px;
+        width: 35px;
+        font-size: 1.5rem;
+    }
+
+    .footer-main-info p {
+        font-size: 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+
+    .footer-bottom a {
+        font-size: 12px;
+    }
+}
+
+/* Për ekranet më të mëdha (për desktop dhe laptopë) */
+@media (min-width: 769px) {
+    footer {
+        padding: 50px 10%;
+    }
+
+    .newsletter {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 10%;
+    }
+
+    .newsletter-form h3 {
+        font-size: 24px;
+    }
+
+    .newsletter-form form {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .footer-main {
+        padding: 50px 10%;
+    }
+
+    .footer-lists {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .footer-icons {
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        padding: 20px 10%;
+        justify-content: space-between;
+    }
+}
