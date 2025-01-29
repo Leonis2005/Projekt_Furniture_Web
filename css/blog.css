@@ -656,7 +656,6 @@ footer {
 
 
 /* Mbarimi i Shop Page */
-
 @media (max-width: 768px) {
     .newsletter {
         flex-direction: column;
