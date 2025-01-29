@@ -25,10 +25,10 @@ html {
 }
 
 .form-container {
-    width: 40rem; /* Reduced width */
-    padding: 2rem; /* Reduced padding */
+    width: 40rem; 
+    padding: 2rem; 
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 2rem; /* Reduced border-radius */
+    border-radius: 2rem; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -38,15 +38,15 @@ html {
 
 .form-container form {
     width: 100%;
-    padding: 3rem; /* Reduced padding */
+    padding: 3rem; 
     background: #ffffff;
-    border-radius: 1.5rem; /* Reduced border-radius */
+    border-radius: 1.5rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .form-container form h3 {
-    font-size: 2.8rem; /* Reduced font-size */
-    padding-bottom: 2rem; /* Reduced padding */
+    font-size: 2.8rem; 
+    padding-bottom: 2rem; 
     color: #3b5d50;
     text-align: center;
     font-weight: 600;
@@ -55,12 +55,12 @@ html {
 .form-container form .box {
     width: 100%;
     text-transform: none;
-    font-size: 1.6rem; /* Reduced font-size */
+    font-size: 1.6rem; 
     color: #3b5d50;
-    padding: 1rem 1.5rem; /* Reduced padding */
+    padding: 1rem 1.5rem; 
     border: 0.1rem solid #3b5d50;
-    margin: 1rem 0; /* Reduced margin */
-    border-radius: 0.8rem; /* Reduced border-radius */
+    margin: 1rem 0;
+    border-radius: 0.8rem;
     background: #ffffff;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -71,12 +71,12 @@ html {
 
 .form-container form .btn {
     width: 100%;
-    padding: 1rem; /* Reduced padding */
-    font-size: 1.8rem; /* Reduced font-size */
+    padding: 1rem; 
+    font-size: 1.8rem; 
     color: #ffffff;
     background: #3b5d50;
     border: none;
-    border-radius: 0.8rem; /* Reduced border-radius */
+    border-radius: 0.8rem; 
     transition: background 0.3s ease;
     margin-top: 2rem;
 }
@@ -87,8 +87,8 @@ html {
 }
 
 .form-container form p {
-    padding-top: 2rem; /* Reduced padding */
-    font-size: 1.4rem; /* Reduced font-size */
+    padding-top: 2rem; 
+    font-size: 1.4rem; 
     color: #3b5d50;
     text-align: center;
 }
@@ -107,4 +107,89 @@ html {
     color: red;
     margin-top: 0.5rem;
     font-size: 1.4rem;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .form-container form {
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    .form-container form h3 {
+        font-size: 2.4rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .form-container form .box {
+        font-size: 1.4rem;
+        padding: 0.8rem 1.2rem;
+        margin: 0.8rem 0;
+        border-radius: 0.6rem;
+    }
+
+    .form-container form .btn {
+        font-size: 1.6rem;
+        padding: 0.8rem;
+        border-radius: 0.6rem;
+    }
+
+    .form-container form p {
+        font-size: 1.2rem;
+        padding-top: 1.5rem;
+    }
+
+    .error {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 95%;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .form-container form {
+        padding: 1.5rem;
+        border-radius: 0.8rem;
+    }
+
+    .form-container form h3 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .form-container form .box {
+        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+        margin: 0.6rem 0;
+        border-radius: 0.5rem;
+    }
+
+    .form-container form .btn {
+        font-size: 1.4rem;
+        padding: 0.6rem;
+        border-radius: 0.5rem;
+    }
+
+    .form-container form p {
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+
+    .error {
+        font-size: 1rem;
+    }
 }
