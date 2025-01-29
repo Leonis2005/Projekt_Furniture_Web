@@ -589,7 +589,50 @@
   
   /* Mbarimi i seksionit Footer */
   
-  
-  
-  
-  
+  /* Responsive teami */
+  @media (max-width: 768px) {
+    .newsletter {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .newsletter-form form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .newsletter-form input {
+        width: 80%;
+    }
+
+    .newsletter-form button {
+        width: auto;
+    }
+
+    .newsletter-img {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .newsletter-img img {
+        max-width: 100px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter-form input {
+        width: 100%;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .newsletter-img img {
+        max-width: 80px;
+    }
+}
