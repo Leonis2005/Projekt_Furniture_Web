@@ -655,8 +655,113 @@ footer {
 /* Mbarimi i seksionit Footer */
 
 
-/* Mbarimi i Shop Page */
+@media (max-width: 1024px) {
+    .ourblog .box1-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.5rem;
+    }
 
+    .ourblog .box1 {
+        width: 100%; 
+    }
+
+    .ourblog .content1 h3 {
+        font-size: 1.6rem;
+    }
+
+    .ourblog .content1 p {
+        font-size: 1.3rem;
+    }
+
+    .ourblog .btn1 {
+        font-size: 1.3rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .ourblog .icons {
+        font-size: 1rem;
+    }
+
+    .ourblog .icons i {
+        padding-right: 0.3rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .ourblog .box1-container {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+
+    .ourblog .box1 {
+        width: 100%; 
+    }
+
+    .ourblog .content1 h3 {
+        font-size: 1.4rem; 
+    }
+
+    .ourblog .content1 p {
+        font-size: 1.2rem; 
+    }
+
+    .ourblog .btn1 {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .ourblog .icons {
+        flex-direction: column;
+        align-items: flex-start; 
+        font-size: 1rem;
+    }
+
+    .ourblog .icons a {
+        margin-bottom: 0.5rem;
+    }
+
+    .ourblog .icons i {
+        padding-right: 0.3rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .ourblog .box1-container {
+        grid-template-columns: 1fr;
+        gap: 1rem; 
+    }
+
+    .ourblog .box1 {
+        width: 100%;
+    }
+
+    .ourblog .content1 h3 {
+        font-size: 1.3rem; 
+    }
+
+    .ourblog .content1 p {
+        font-size: 1.1rem;
+    }
+
+    .ourblog .btn1 {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .ourblog .icons {
+        font-size: 0.9rem;
+    }
+
+    .ourblog .icons a {
+        margin-bottom: 0.5rem;
+    }
+
+    .ourblog .icons i {
+        padding-right: 0.3rem;
+    }
+}
 @media (max-width: 768px) {
     .newsletter {
         flex-direction: column;
@@ -825,3 +930,6 @@ footer {
         justify-content: space-between;
     }
 }
+
+
+/* Mbarimi i Blog Page */
