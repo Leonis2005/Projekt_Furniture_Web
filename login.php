@@ -1,3 +1,28 @@
+<?php
+
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+if (isset($_SESSION['useremail'])) {
+  header('Location:index.php');
+  exit;
+}
+
+if (isset($_SESSION['adminemail'])) {
+  header('Location:dashboard.php');
+  exit;
+}
+
+require_once 'LoginController.php';
+
+$loginControll = new LoginController();
+$loginControll->handleLogin();
+$errorMsg = $loginControll->getErrorMessage();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +36,17 @@
 </head>
 <body>
     <div class="login-page" id="loginPage">
-        <form id="loginForm">
+        <form id="loginForm" method="POST" action="<?= htmlspecialchars ($_SERVER['PHP_SELF'])?>">
             <h3>Login to Your Account</h3>
-            <input type="email" id="email" placeholder="Enter your email" class="box">
+            <input type="email" id="email" placeholder="Enter your email" class="box" name="email">
             <span id="emailError" class="error"></span>
-            <input type="password" id="password" placeholder="Enter your password" class="box">
+            <input type="password" id="password" placeholder="Enter your password" class="box" name="password">
             <span id="passwordError" class="error"></span>
             <div class="remember">
                 <input type="checkbox" name="" id="remember-me">
                 <label for="remember-me">Remember me</label>
             </div>
-            <input type="submit" value="Login Now" class="btn">
+            <input type="submit" value="Login Now" class="btn" name="Login">
             <p>Don't have an account? <a href="register.html" id="signup-link">Create now</a></p>
         </form>
     </div>
