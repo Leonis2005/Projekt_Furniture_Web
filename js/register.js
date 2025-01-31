@@ -44,15 +44,6 @@ document.getElementById('registerForm').addEventListener('submit', function(even
         isValid = false;
     }
 
-    // Validate confirm password
-    if (!confirmPassword) {
-        confirmPasswordError.textContent = 'Please confirm your password';
-        isValid = false;
-    } else if (password !== confirmPassword) {
-        confirmPasswordError.textContent = 'Passwords do not match';
-        isValid = false;
-    }
-
     if (isValid) {
         window.location.href = "home.html"; // Redirect to home page
     }
