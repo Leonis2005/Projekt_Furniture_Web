@@ -1,5 +1,5 @@
 document.getElementById('registerForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting by default
+    event.preventDefault();
 
     let isValid = true;
     const username = document.getElementById('username').value;
@@ -11,13 +11,13 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const passwordError = document.getElementById('passwordError');
     const confirmPasswordError = document.getElementById('confirmPasswordError');
 
-    // Reset error messages
+    
     usernameError.textContent = '';
     emailError.textContent = '';
     passwordError.textContent = '';
     confirmPasswordError.textContent = '';
 
-    // Validate username
+   
     if (!username) {
         usernameError.textContent = 'Username is required';
         isValid = false;
@@ -26,7 +26,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
         isValid = false;
     }
 
-    // Validate email
+   
     if (!email) {
         emailError.textContent = 'Email is required';
         isValid = false;
@@ -35,7 +35,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
         isValid = false;
     }
 
-    // Validate password
+   
     if (!password) {
         passwordError.textContent = 'Password is required';
         isValid = false;
@@ -45,7 +45,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     }
 
     if (isValid) {
-        window.location.href = "home.html"; // Redirect to home page
+        window.location.href = "home.html"; 
     }
 });
 
