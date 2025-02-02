@@ -1,60 +1,46 @@
-document.getElementById('registerForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    let isValid = true;
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('registerForm');
+    const username = document.getElementById('username');
     const usernameError = document.getElementById('usernameError');
+    const email = document.getElementById('email');
     const emailError = document.getElementById('emailError');
+    const password = document.getElementById('password');
     const passwordError = document.getElementById('passwordError');
-    const confirmPasswordError = document.getElementById('confirmPasswordError');
-
     
-    usernameError.textContent = '';
-    emailError.textContent = '';
-    passwordError.textContent = '';
-    confirmPasswordError.textContent = '';
+    form.addEventListener('submit', function (e) {
+        let isValid = true;
 
-   
-    if (!username) {
-        usernameError.textContent = 'Username is required';
-        isValid = false;
-    } else if (!/^[a-zA-Z0-9_]{3,15}$/.test(username)) {
-        usernameError.textContent = 'Username must be 3-15 characters long and contain only letters, numbers, and underscores';
-        isValid = false;
-    }
+        // Clear previous error messages
+        usernameError.textContent = '';
+        emailError.textContent = '';
+        passwordError.textContent = '';
 
-   
-    if (!email) {
-        emailError.textContent = 'Email is required';
-        isValid = false;
-    } else if (!validateEmail(email)) {
-        emailError.textContent = 'Invalid email format';
-        isValid = false;
-    }
+        // Validate username
+        if (username.value.trim() === '') {
+            usernameError.textContent = 'Username is required.';
+            isValid = false;
+        }
 
-   
-    if (!password) {
-        passwordError.textContent = 'Password is required';
-        isValid = false;
-    } else if (!validatePassword(password)) {
-        passwordError.textContent = 'Password must be at least 8 characters long and include uppercase letters, lowercase letters, numbers, and special characters';
-        isValid = false;
-    }
+        // Validate email
+        if (email.value.trim() === '') {
+            emailError.textContent = 'Email is required.';
+            isValid = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+            emailError.textContent = 'Please enter a valid email address.';
+            isValid = false;
+        }
 
-    if (isValid) {
-        window.location.href = "home.html"; 
-    }
+        // Validate password
+        if (password.value.trim() === '') {
+            passwordError.textContent = 'Password is required.';
+            isValid = false;
+        } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W]).{8,}$/.test(password.value.trim())) {
+            passwordError.textContent = 'Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.';
+            isValid = false;
+        }
+
+        if (!isValid) {
+            e.preventDefault(); // Prevent form submission if validation fails
+        }
+    });
 });
-
-function validateEmail(email) {
-    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return re.test(String(email).toLowerCase());
-}
-
-function validatePassword(password) {
-    const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$/;
-    return re.test(String(password));
-}
