@@ -1,3 +1,16 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (!isset($_SESSION['useremail'])) {
+    header('Location: login.php');
+    exit;
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +29,7 @@
     <!-- Fillimi i seksionit Header  -->
 
     <header class="header">
-        <a href="home.html" class="logo"><i class="ri-store-line"></i>Furnitia</a>
+        <a href="home.php" class="logo"><i class="ri-store-line"></i>Furnitia</a>
         <form action="#" class="search-form">
             <input type="search" placeholder="search here..." id="search-box">
             <label for="search-box" class="ri-search-line"></label>
@@ -26,7 +39,7 @@
             <div id="menu-btn" class="ri-menu-line"></div>
             <div id="search-btn" class="ri-search-line"></div>
             <div id="cart-btn" class="ri-shopping-cart-line"></div>
-            <a href="login.html"><div id="login-btn" class="ri-user-line"></div></a>
+            <a href="login.php"><div id="login-btn" class="ri-user-line"></div></a>
         </div>
     </header>
 
@@ -41,12 +54,12 @@
     <!-- Fillimi i Navbar  -->
 
     <nav class="navbar">
-        <a href="home.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">About Us</a>
-        <a href="team.html">Team</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="home.php">Home</a>
+        <a href="Shop.php">Shop</a>
+        <a href="about.php">About Us</a>
+        <a href="team.php">Team</a>
+        <a href="blog.php">Blog</a>
+        <a href="contact.php">Contact Us</a>
     </nav>
 
 
@@ -103,7 +116,7 @@
 
     <section class="heading">
         <h3>About Us</h3>
-        <p><a href="home.html">Home</a> / <span>About Us</span> </p>
+        <p><a href="home.php">Home</a> / <span>About Us</span> </p>
     </section>
 
     <!-- Mbarimi i seksionit Heading  -->
@@ -194,10 +207,10 @@
                 <div class="links">
                     <div class="links1">
                         <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="team.php">Team</a></li>
+                            <li><a href="blog.php">Blog</a></li>
+                            <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </div>
                     <div class="links2">

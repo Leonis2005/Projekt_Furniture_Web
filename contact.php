@@ -1,14 +1,27 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (!isset($_SESSION['useremail'])) {
+    header('Location: login.php');
+    exit;
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team</title>
+    <title>Contact Us</title>
 
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/contact.css">
 
 </head>
 <body>
@@ -16,7 +29,7 @@
     <!-- Fillimi i seksionit Header  -->
 
     <header class="header">
-        <a href="home.html" class="logo"><i class="ri-store-line"></i>Furnitia</a>
+        <a href="home.php" class="logo"><i class="ri-store-line"></i>Furnitia</a>
         <form action="#" class="search-form">
             <input type="search" placeholder="search here..." id="search-box">
             <label for="search-box" class="ri-search-line"></label>
@@ -26,7 +39,7 @@
             <div id="menu-btn" class="ri-menu-line"></div>
             <div id="search-btn" class="ri-search-line"></div>
             <div id="cart-btn" class="ri-shopping-cart-line"></div>
-            <a href="login.html"><div id="login-btn" class="ri-user-line"></div></a>
+            <a href="login.php"><div id="login-btn" class="ri-user-line"></div></a>
         </div>
     </header>
 
@@ -41,12 +54,12 @@
     <!-- Fillimi i Navbar  -->
 
     <nav class="navbar">
-        <a href="home.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">About Us</a>
-        <a href="team.html">Team</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="home.php">Home</a>
+        <a href="shop.php">Shop</a>
+        <a href="about.php">About Us</a>
+        <a href="team.php">Team</a>
+        <a href="blog.php">Blog</a>
+        <a href="contact.php">Contact Us</a>
     </nav>
 
 
@@ -103,124 +116,37 @@
     <!-- Fillimi i seksionit te heading  -->
 
     <section class="heading">
-        <h3>Team</h3>
-        <p><a href="home.html">Home</a> / <span>Team</span> </p>
+        <h3>Contact Us</h3>
+        <p><a href="home.php">Home</a> / <span>Contact Us</span> </p>
     </section>
 
     <!-- Mbarimi i seksionit te heading  -->
 
-
-<!-- Fillimi i Teamit -->
- 
-<section class="team">
-    <h1 class="title"><span>Our Team</span><a href="#">View all >></a></h1>
-    <div class="box-container">
-        <div class="box">
-            <div class="share">
-                <a href="#" class="ri-facebook-fill"></a>
-                <a href="#" class="ri-twitter-fill"></a>
-                <a href="#" class="ri-pinterest-fill"></a>
-                <a href="#" class="ri-instagram-fill"></a>
-            </div>
-            <div class="image">
-                <img src="image/team-1.jpg" alt="">
-            </div>
-            <div class="user">
-                <h3>Erza Hasanaj</h3>
-                <span>Dizajnere</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="share">
-                <a href="#" class="ri-facebook-fill"></a>
-                <a href="#" class="ri-twitter-fill"></a>
-                <a href="#" class="ri-pinterest-fill"></a>
-                <a href="#" class="ri-instagram-fill"></a>
-            </div>
-            <div class="image">
-                <img src="image/team-2.jpg" alt="">
-            </div>
-            <div class="user">
-                <h3>Luan Maloku</h3>
-                <span>Montues</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="share">
-                <a href="#" class="ri-facebook-fill"></a>
-                <a href="#" class="ri-twitter-fill"></a>
-                <a href="#" class="ri-pinterest-fill"></a>
-                <a href="#" class="ri-instagram-fill"></a>
-            </div>
-            <div class="image">
-                <img src="image/team-3.jpg" alt="">
-            </div>
-            <div class="user">
-                <h3>Vina Bytyqi</h3>
-                <span>Informatore</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="share">
-                <a href="#" class="ri-facebook-fill"></a>
-                <a href="#" class="ri-twitter-fill"></a>
-                <a href="#" class="ri-pinterest-fill"></a>
-                <a href="#" class="ri-instagram-fill"></a>
-            </div>
-            <div class="image">
-                <img src="image/team-4.jpg" alt="">
-            </div>
-            <div class="user">
-                <h3>Leotrim Shabani</h3>
-                <span>Montues</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="share">
-                <a href="#" class="ri-facebook-fill"></a>
-                <a href="#" class="ri-twitter-fill"></a>
-                <a href="#" class="ri-pinterest-fill"></a>
-                <a href="#" class="ri-instagram-fill"></a>
-            </div>
-            <div class="image">
-                <img src="image/team-5.jpg" alt="">
-            </div>
-            <div class="user">
-                <h3>Lorena Struga</h3>
-                <span>Mirembajtese</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="share">
-                <a href="#" class="ri-facebook-fill"></a>
-                <a href="#" class="ri-twitter-fill"></a>
-                <a href="#" class="ri-pinterest-fill"></a>
-                <a href="#" class="ri-instagram-fill"></a>
-            </div>
-            <div class="image">
-                <img src="image/team-6.jpg" alt="">
-            </div>
-            <div class="user">
-                <h3>Roni Fishekqiu</h3>
-                <span>Drejtor Ekzekutiv</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Mbarimi i Teamit -->
+<!-- Fillimi i Contactit -->
+<div class="contact">
+    <form action="#">
+        <h3>Get in touch</h3>
+        <label>Name</label>
+        <input type="text" class="box">
+        <label>Number</label>
+        <input type="number" class="box">
+        <label>Email</label>
+        <input type="email" class="box">
+        <label>Suggestions!</label>
+        <textarea name="" id="" cols="30" rows="10" class="box"></textarea>
+        <button class="btn1">Send Message</button>
+    </form>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47273.238908344356!2d20.69339783607466!3d42.22347529022037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353950a12f4301f%3A0xda0e2e9b8d3d5850!2sPrizren!5e0!3m2!1sen!2s!4v1733444952581!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- Mbarimi i Contactit -->
 
 
 
 
-     <!-- Fillimi i seksionit te footer -->
 
-     <footer>
+    <!-- Fillimi i seksionit te footer -->
+
+    <footer>
         <div class="newsletter">
             <div class="newsletter-form">
                 <h3><i class="ri-mail-line"></i><span>Subscribe To Newsletter</span></h3>
@@ -253,10 +179,10 @@
                 <div class="links">
                     <div class="links1">
                         <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="team.php">Team</a></li>
+                            <li><a href="blog.php">Blog</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="links2">
@@ -300,11 +226,7 @@
 
     <!-- Mbarimi i seksionit te footer  -->
 
-    
-
-
-
-    <script src="js/team.js"></script>
+    <script src="js/contact.js"></script>
     
 </body>
 </html>

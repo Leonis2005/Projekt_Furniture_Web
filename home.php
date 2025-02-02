@@ -1,3 +1,17 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (!isset($_SESSION['useremail'])) {
+    header('Location: login.php');
+    exit;
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +33,7 @@
     <!-- Fillimi i seksionit Header  -->
 
     <header class="header">
-        <a href="home.html" class="logo"><i class="ri-store-line"></i>Furnitia</a>
+        <a href="home.php" class="logo"><i class="ri-store-line"></i>Furnitia</a>
         <form action="#" class="search-form">
             <input type="search" placeholder="search here..." id="search-box">
             <label for="search-box" class="ri-search-line"></label>
@@ -29,7 +43,7 @@
             <div id="menu-btn" class="ri-menu-line"></div>
             <div id="search-btn" class="ri-search-line"></div>
             <div id="cart-btn" class="ri-shopping-cart-line"></div>
-            <a href="login.html"><div id="login-btn" class="ri-user-line"></div></a>
+            <a href="login.php"><div id="login-btn" class="ri-user-line"></div></a>
         </div>
     </header>
 
@@ -44,12 +58,12 @@
     <!-- Fillimi i Navbar  -->
 
     <nav class="navbar">
-        <a href="home.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">About Us</a>
-        <a href="team.html">Team</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="home.php">Home</a>
+        <a href="shop.php">Shop</a>
+        <a href="about.php">About Us</a>
+        <a href="team.php">Team</a>
+        <a href="blog.php">Blog</a>
+        <a href="contact.php">Contact Us</a>
     </nav>
 
 
@@ -114,7 +128,7 @@
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
                 <div class="btns">
-                    <a href="shop.html"><button class="sn">Shop Now</button></a>
+                    <a href="shop.php"><button class="sn">Shop Now</button></a>
                     <button class="e">Explore</button>
                 </div>
             </div>
@@ -134,7 +148,7 @@
         <div class="product-info">
             <h3>Crafted with Excellent Material</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="shop.html"><button class="e">Explore</button></a>
+            <a href="shop.php"><button class="e">Explore</button></a>
         </div>
         <div class="product-card">
             <div class="product-item">
@@ -299,7 +313,7 @@
         <div class="blog-main">
             <div class="blog-head">
                 <h2>Recent Blog</h2>
-                <a href="blog.html">View All Post</a>
+                <a href="blog.php">View All Post</a>
             </div>
             <div class="blog-cards">
                 <div class="blog-card">
@@ -366,10 +380,10 @@
                 <div class="links">
                     <div class="links1">
                         <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="about.php">About Us</a></li>
+                            <li><a href="team.php">Team</a></li>
+                            <li><a href="blog.php">Blog</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="links2">
