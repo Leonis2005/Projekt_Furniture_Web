@@ -52,7 +52,6 @@ $succeedMessage = $blogController->getSucceedMessage();
             <li><a href="dashboard.php"><i class="fas fa-home"></i> Dashboard</a></li>
             <li><a href="AdminUser.php"><i class="fas fa-users"></i> Users</a></li>
             <li><a href="adminBlogs.php"><i class="fa-solid fa-blog"></i> Blogs</a></li>
-            <li><a href="adminNews.php"><i class="fas fa-chart-line"></i> News</a></li>
             <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li>
             <li><a href="#"><i class="fas fa-question-circle"></i> Support</a></li>
         </ul>
