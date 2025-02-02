@@ -47,7 +47,7 @@ $succeedMessage = $productController->getSucceedMessage();
 
 <body>
     <div class="sidebar">
-        <h2>FitProShop</h2>
+        <h2>Furnitia</h2>
         <ul>
             <li><a href="dashboard.php"><i class="fas fa-home"></i> Dashboard</a></li>
             <li><a href="AdminUser.php"><i class="fas fa-users"></i> Users</a></li>
